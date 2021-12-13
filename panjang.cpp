@@ -7,8 +7,10 @@ using namespace std;
 	g++ panjang.cpp -o
 */
 
+
 float turun(int z);
 float naik(int y);
+
 
 int main()
 {
@@ -17,9 +19,16 @@ int main()
 	cout << endl; 
 
 	float angka, hasil, n, up, down;
-	int x1, x2, z, y;
+	int r, x1, x2, z, y;
 	char kp ;
 	string satuan[7] = {"km", "hm", "dam", "m", "dm", "cm", "mm" };
+
+	for (int r = 0; r < 7; r++)
+	{
+		cout << satuan[r] << "  =  " << r << endl;
+	}
+
+	cout << endl; 
 
 	do
 	{
