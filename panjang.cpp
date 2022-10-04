@@ -8,16 +8,31 @@ using namespace std;
 */
 
 
-float turun(int z);
-float naik(int y);
+// kalau satuannya turun
+float turun(int z){
+	float n = 1;
 
+	for (int i = 0; i < z ; i++)
+	{
+		n *= 10 ; 
+	}
 
-int main()
-{
-	cout << "Program Pengonversi Satuan Panjang" << endl ;
+	return n;
+}
 
-	cout << endl; 
+//kalau satuannya naik
+float naik(int y){
+	float n = 1;
 
+	for (int i = 0; i < y ; i++)
+	{
+		n /= 10 ; 
+	}
+
+	return n;
+}
+
+void konversi(){
 	float angka, hasil, n, up, down;
 	int r, x1, x2, z, y;
 	char kp ;
@@ -70,32 +85,17 @@ int main()
 		cout << endl ;
 
 	} while (kp == 'y' || kp == 'Y');
+}
+
+int main()
+{
+	cout << "Program Pengonversi Satuan Panjang" << endl ;
+
+	cout << endl; 
+
+	konversi();
 
 	cout << "Program Selesai" << endl;
 
 	return 0;
-}
-
-// kalau satuannya turun
-float turun(int z){
-	float n = 1;
-
-	for (int i = 0; i < z ; i++)
-	{
-		n *= 10 ; 
-	}
-
-	return n;
-}
-
-//kalau satuannya naik
-float naik(int y){
-	float n = 1;
-
-	for (int i = 0; i < y ; i++)
-	{
-		n /= 10 ; 
-	}
-
-	return n;
 }
